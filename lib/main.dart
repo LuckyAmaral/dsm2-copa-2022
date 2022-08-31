@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'ui/lista_equipes.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,14 +9,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // Application name
-      title: 'Flutter Hello World',
+      title: 'Copa do Mundo Catar 2022',
       // Application theme data, you can set the colors for the application as
       // you want
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.brown,
       ),
       // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Copa do Mundo Catar 2022'),
     );
   }
 }
@@ -27,15 +28,10 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
+        appBar: AppBar(
+          // The title text which will be shown on the action bar
+          title: Text(title),
         ),
-      ),
-    );
+        body: ListaEquipes());
   }
 }
