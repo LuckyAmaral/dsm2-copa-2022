@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'ui/lista_equipes.dart';
+import 'ui/estrutura.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,11 +27,6 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          // The title text which will be shown on the action bar
-          title: Text(title),
-        ),
-        body: ListaEquipes());
+    return Estrutura();
   }
 }
