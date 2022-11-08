@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 import 'ui/estrutura.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+      // Replace with actual values
+      options: DefaultFirebaseOptions.web);
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
